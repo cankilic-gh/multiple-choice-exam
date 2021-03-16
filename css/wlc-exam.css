@@ -375,15 +375,14 @@ a.nav-btn:disabled {
   top: 20%;
   z-index: 2;
   margin: 0 1rem;
-  max-width: 30rem;
-  height: auto;
+  max-width: 36rem;
   background-color: #fff;
   border-radius: 1rem;
 }
 
 .container-popup .popup .header {
   font-weight: 500;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -401,6 +400,8 @@ a.nav-btn:disabled {
   padding: 2rem;
   padding-top: 1rem;
   color: #444;
+  max-height: 26rem;
+  overflow-y: auto;
 }
 
 .container-popup .popup .footer {

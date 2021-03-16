@@ -241,13 +241,12 @@ a.nav-btn {
         top:20%;
         z-index: 2;
         margin:0 1rem;
-        max-width: 30rem;
-        height:auto;
+        max-width: 36rem;
         background-color: $white;
         border-radius:1rem;
         .header {
             font-weight: 500;
-            padding: 1rem 0;
+            padding: 1rem 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -258,6 +257,8 @@ a.nav-btn {
             padding: 2rem;
             padding-top: 1rem;
             color:$greydarker;
+            max-height:26rem;
+            overflow-y: auto;
         }
         .footer {
             border-top:solid 1px $grey;
