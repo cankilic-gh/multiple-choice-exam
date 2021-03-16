@@ -1,0 +1,53 @@
+$black:#212121;
+$grey:#EBEBEB;
+$greydark:#888;
+$white:#fff;
+$blurdark:#113C4A;
+$activechoice:#49BFBC;
+$warningred:#FF6768;
+$successgreen:#3DAE6C;
+$popupbg:#212121;
+
+$header1:2rem;
+$nav-headline:1.5rem;
+$nav-detail:1.125rem;
+$question:1.25rem;
+$choice:1.125rem;
+$choiceletter:1.375rem;
+
+@mixin nav-btn {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: $white;
+    height: 2.75rem;
+    min-width: 7.75rem;
+    padding: 0.6rem 2rem;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+@mixin choice {
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    line-height: 1.3;
+    text-align: left;
+    color: $black;
+    background-color: $white;
+    border-radius: 0.125rem;
+    border: none;
+    padding: 1.25rem;
+    font-size: $choice;
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+@mixin warning-box {
+    font-size: 1rem;
+    font-weight: 400;
+    color: $warningred;
+    min-width: 7.75rem;
+    padding: 2rem 2rem;
+    border: solid 1px $warningred;
+}

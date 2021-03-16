@@ -1,0 +1,424 @@
+/* GLOBALS */
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.4;
+  color: #212121;
+  height: 100%;
+  position: relative;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 40rem) {
+  /* 640px */
+  .container .nav-btn-red {
+    display: none;
+  }
+  .btn-full {
+    display: block !important;
+  }
+  .result-table div {
+    width: 100% !important;
+  }
+}
+
+header {
+  background-color: #212121;
+  height: 7.5rem;
+  color: #fff;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: inherit;
+}
+
+header .container img {
+  margin-right: 1rem;
+}
+
+header .container .headline div:first-child {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+header .container .headline div:first-child span {
+  font-weight: 100;
+}
+
+header .container .headline div:first-child strong {
+  font-weight: 400;
+}
+
+header .container .headline div:last-child {
+  font-weight: 100;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  max-width: 61.25rem;
+  /* 980px */
+}
+
+.red {
+  color: #FF6768;
+}
+
+.green {
+  color: #3DAE6C;
+}
+
+.container .nav-right button,
+.container .nav-left button {
+  margin-top: 1.6rem;
+}
+
+.container .nav-left {
+  text-align: left;
+}
+
+.container .nav-right {
+  text-align: right;
+}
+
+.container .nav-headline {
+  font-size: 1.5rem;
+}
+
+.container .nav-detail {
+  font-size: 1.125rem;
+  margin-top: 1.6rem;
+  color: #888;
+}
+
+.container .nav-detail span {
+  color: #212121;
+  font-weight: 500;
+}
+
+.exam {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: calc(100% - 7.5rem);
+  /* - header */
+}
+
+.exam .navigation {
+  background-color: #EBEBEB;
+  padding: 1.6rem 0;
+}
+
+.exam .navigation .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.exam .questions {
+  color: #fff;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #113C4A;
+}
+
+.exam .questions .question {
+  font-size: 1.25rem;
+  padding: 3rem 0;
+}
+
+.exam .questions .choices label {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  line-height: 1.3;
+  text-align: left;
+  color: #212121;
+  background-color: #fff;
+  border-radius: 0.125rem;
+  border: none;
+  padding: 1.25rem;
+  font-size: 1.125rem;
+  -webkit-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.exam .questions .choices label:hover {
+  background-color: #fff;
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+}
+
+.exam .questions .choices label span:first-child {
+  font-weight: bold;
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.375rem;
+}
+
+.exam .questions .choices label span:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.exam .questions .choices input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.exam .questions .choices input[type="radio"]:checked + label {
+  color: #fff;
+  background-color: #49BFBC;
+}
+
+.nav-btn,
+a.nav-btn {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #fff;
+  height: 2.75rem;
+  min-width: 7.75rem;
+  padding: 0.6rem 2rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  border: none;
+  -webkit-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn-green,
+a.nav-btn-green {
+  background: -webkit-gradient(linear, left top, right bottom, from(#6FCF97), to(#57A678));
+  background: linear-gradient(to bottom right, #6FCF97 0%, #57A678 100%);
+}
+
+.nav-btn-blue,
+a.nav-btn-blue {
+  background: -webkit-gradient(linear, left top, right bottom, from(#5DC4D5), to(#4497A5));
+  background: linear-gradient(to bottom right, #5DC4D5 0%, #4497A5 100%);
+}
+
+.nav-btn-red,
+a.nav-btn-red {
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF6768), to(#E0595A));
+  background: linear-gradient(to bottom right, #FF6768 0%, #E0595A 100%);
+}
+
+.nav-btn-white,
+a.nav-btn-white {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ffffff), to(#f5f5f5));
+  background: linear-gradient(to bottom right, #ffffff 0%, #f5f5f5 100%);
+  color: #212121;
+}
+
+.nav-btn:hover,
+a.nav-btn:hover {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+}
+
+.nav-btn:disabled,
+a.nav-btn:disabled {
+  opacity: 0.5;
+}
+
+.btn-full {
+  width: 100%;
+  border-radius: 0;
+  display: none;
+}
+
+.instruction .container, .result .container {
+  margin-bottom: 2rem;
+}
+
+.instruction .p-section {
+  margin: 2rem 0;
+  width: 100%;
+  display: inline-block;
+}
+
+.instruction .p-section.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.instruction .p-section.flex div:first-child {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  margin-bottom: 1rem;
+}
+
+.instruction .p-section.flex div a:last-child {
+  text-align: right;
+}
+
+.instruction .p-section .warning-text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #FF6768;
+  min-width: 7.75rem;
+  padding: 2rem 2rem;
+  border: solid 1px #FF6768;
+}
+
+.instruction .confirm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.instruction .confirm div:first-child {
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.instruction .confirm div:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.instruction .confirm input[type=checkbox] {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  margin-left: 0.4rem;
+}
+
+.instruction .p-section .result-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.instruction .p-section .result-table div {
+  width: 50%;
+}
+
+.instruction .p-section .result-table div p span:first-child {
+  width: 40%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.instruction .p-section .result-table div p span:last-child {
+  font-weight: 700;
+}
+
+.container-popup {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-popup .popup {
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 20%;
+  z-index: 2;
+  margin: 0 1rem;
+  max-width: 30rem;
+  height: auto;
+  background-color: #fff;
+}
+
+.container-popup .popup .header {
+  font-weight: 500;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  background-color: #113C4A;
+}
+
+.container-popup .popup .content {
+  padding: 2rem;
+}
+
+.container-popup .popup .footer {
+  border-top: solid 1px #EBEBEB;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-popup .popup .footer .nav-btn {
+  margin: 0 0.2rem;
+}
+
+.container-popup .popup-background {
+  background-color: #212121;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=wlc-exam.css.map */
